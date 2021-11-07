@@ -112,7 +112,6 @@ main{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: relative;
         width: 70%;
         padding: 0 5%;
         left: 10%;
@@ -121,16 +120,27 @@ main{
         background: $clr-dark-violet;
         border-radius: 1rem;
         overflow:hidden;
-        #link-input{
+        .link-input{
+            box-sizing: border-box;
             width: 100%;
             padding:0.9rem;
             margin-right: 2rem;
             border-radius: 0.3rem;
-            border:none;
+            border:3px solid $clr-white;
             outline: none;
             font-size: 1.2rem;
             z-index: 1;
         }
+        .link-input-error{
+            position: relative;
+            border:3px solid $clr-red;
+        }
+
+        .link-input-error::placeholder{
+            color: $clr-red;
+            opacity: 0.7;
+        }
+        
         .shorten-btn{
             padding: 0.8rem 1.5rem;
             font-size: 1.2rem;
@@ -140,6 +150,16 @@ main{
             cursor: pointer;
             white-space: nowrap;
             z-index: 1;
+        }
+
+        .no-link-message{
+            position: absolute;
+            color: $clr-red;
+            bottom: 1rem;
+        }
+
+        .hide{
+            display: none;
         }
 
         .background-shorten{
@@ -153,6 +173,51 @@ main{
             z-index: 0;
         }
         
+    }
+
+    .shortened-links{
+        width: 80%;
+        padding: 0 10%;
+        height: auto;
+        .shortened-link-container{
+            box-sizing: border-box;
+            width: 100%;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .original-link{
+                font-size: 1rem;
+            }
+            .new-link-container{
+                display: flex;
+                align-items: center;
+                .new-link{
+                    color: $clr-cyan;
+                    font-size: 1rem;
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding-right: 1rem;
+                }
+    
+                .copy-btn{
+                    padding: 0.5rem 1.5rem;
+                    background-color: $clr-cyan;
+                    font-size: 0.8rem;
+                    color: $clr-white;
+                    border-radius: 0.3rem;
+                    cursor: pointer;
+                }
+            }
+
+            margin-bottom: 1rem;
+
+        }
+
+
     }
 
     .advanced-stats{
