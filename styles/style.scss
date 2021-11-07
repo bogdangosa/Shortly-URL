@@ -191,6 +191,8 @@ main{
 
             .original-link{
                 font-size: 1rem;
+                max-width: 70%;
+                overflow: hidden;
             }
             .new-link-container{
                 display: flex;
@@ -373,6 +375,106 @@ footer{
         a{
             text-decoration: none;
             color: $clr-cyan;
+        }
+    }
+}
+
+
+@media screen and(max-width:700px){
+    header{
+        nav{
+            .nav-bar{
+                display: none;
+            }
+        }
+        
+        .login-btn-container{
+            display: none;
+        }
+    }
+
+    main{
+        .home{
+            height: 75vh;
+            width: 90%;
+            padding: 15vh 5% 10vh 5%;
+            .work-ilustration{
+                position: relative;
+                top: 0;
+                left: 5%;
+                width: 90%;
+                margin-bottom: 1rem;
+            }
+            
+            .home-text-container{
+                width: 100%;
+                text-align: center;
+                h1{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .shorten-link-container{
+            padding: 2rem 5%;
+            flex-direction: column;
+            .link-input{
+                margin-right: 0;
+            }
+            .shorten-btn{
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        .advanced-stats{
+            height: auto;
+            align-items: center;
+
+            .stats-title-container{
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            .stats-cards-container{
+                flex-direction: column;
+                .card{
+                    width: 100%;
+                    top: 0;
+                    margin-bottom: 4rem;
+                }
+                .line{
+                    height: 90%;
+                    width: 10px;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+
+            }
+
+        
+        }
+        .call-to-action-container{
+            .cta-text{
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+
+
+    footer{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 10vh;
+        .navigation-container-footer{
+            flex-direction: column;
         }
     }
 }

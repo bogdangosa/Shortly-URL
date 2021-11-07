@@ -245,6 +245,8 @@ main .shortened-links .shortened-link-container {
 
 main .shortened-links .shortened-link-container .original-link {
   font-size: 1rem;
+  max-width: 70%;
+  overflow: hidden;
 }
 
 main .shortened-links .shortened-link-container .new-link-container {
@@ -481,5 +483,99 @@ footer .attribution {
 footer .attribution a {
   text-decoration: none;
   color: #2acfcf;
+}
+
+@media screen and (max-width: 700px) {
+  header nav .nav-bar {
+    display: none;
+  }
+  header .login-btn-container {
+    display: none;
+  }
+  main .home {
+    height: 75vh;
+    width: 90%;
+    padding: 15vh 5% 10vh 5%;
+  }
+  main .home .work-ilustration {
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  main .home .home-text-container {
+    width: 100%;
+    text-align: center;
+  }
+  main .home .home-text-container h1 {
+    font-size: 2rem;
+  }
+  main .home .home-text-container p {
+    font-size: 1rem;
+  }
+  main .shorten-link-container {
+    padding: 2rem 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .shorten-link-container .link-input {
+    margin-right: 0;
+  }
+  main .shorten-link-container .shorten-btn {
+    width: 80%;
+    text-align: center;
+  }
+  main .advanced-stats {
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .advanced-stats .stats-title-container {
+    width: 80%;
+    margin-left: 10%;
+  }
+  main .advanced-stats .stats-cards-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .advanced-stats .stats-cards-container .card {
+    width: 100%;
+    top: 0;
+    margin-bottom: 4rem;
+  }
+  main .advanced-stats .stats-cards-container .line {
+    height: 90%;
+    width: 10px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+  main .call-to-action-container .cta-text {
+    font-size: 1.5rem;
+  }
+  footer {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 10vh;
+  }
+  footer .navigation-container-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

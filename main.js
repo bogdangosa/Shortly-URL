@@ -10,7 +10,6 @@ ShortenBtn.addEventListener('click',()=>{
 
 const AddLink =  async (link_value)=>{
     const result = await Getdata(link_value);
-    console.log(result);
     LinkInput.value="";
 
     if(!result.ok){
@@ -45,7 +44,7 @@ const AddLink =  async (link_value)=>{
     CopyBtn.classList.add("btn");
     CopyBtn.innerText="Copy"
     CopyBtn.addEventListener('click',()=>{
-        navigator.clipboard.writeText(original_link.innerText);
+        navigator.clipboard.writeText(result.result.full_short_link2);
     })
 
     div.appendChild(CopyBtn);
