@@ -1,4 +1,5 @@
 $clr-cyan:#2acfcf;
+$clr-light-cyan:#9de1e2;
 $clr-white: #ffffff;
 $clr-gray: #f0f1f6;
 $clr-red:#f46262;
@@ -68,6 +69,13 @@ header{
         background: $clr-cyan;
         color: $clr-white;
         border-radius: 4rem;
+        transition: 0.5s;
+        &:hover{
+            background-color: $clr-light-cyan;
+        }
+    }
+    .hamburger{
+        display: none;
     }
 }
 
@@ -98,6 +106,10 @@ main{
                 background: $clr-cyan;
                 color: $clr-white;
                 border-radius: 4rem;   
+                transition: 0.5s;
+                &:hover{
+                    background-color: $clr-light-cyan;
+                }
             }
         }
         .work-ilustration{
@@ -150,6 +162,11 @@ main{
             cursor: pointer;
             white-space: nowrap;
             z-index: 1;
+
+            transition: 0.5s;
+                    &:hover{
+                        background-color: $clr-light-cyan;
+                    }
         }
 
         .no-link-message{
@@ -212,6 +229,10 @@ main{
                     color: $clr-white;
                     border-radius: 0.3rem;
                     cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background-color: $clr-light-cyan;
+                    }
                 }
             }
 
@@ -262,7 +283,7 @@ main{
                 padding:2rem;
                 border-radius: 0.5rem;
                 .icon-circle{
-                    background-color: $clr-very-dark-violet;
+                    background-color: $clr-dark-violet;
                     border-radius: 50%;
                     width: 5rem;
                     height: 5rem;
@@ -313,6 +334,10 @@ main{
             color: $clr-white;
             border-radius: 4rem;
             z-index: 1;
+            transition: 0.5s;
+            &:hover{
+                background-color: $clr-light-cyan;
+            }
         }
         .background-cta{
             position: absolute;
@@ -391,6 +416,18 @@ footer{
         .login-btn-container{
             display: none;
         }
+        .hamburger{
+            display: flex;
+            flex-direction: column;
+            width: 2rem;
+            justify-content: space-between;
+            height: 1.5rem;
+            .line{
+                width: 100%;
+                height: 3px;
+                background-color: $clr-gray-violet;
+            }
+        }
     }
 
     main{
@@ -429,7 +466,17 @@ footer{
                 text-align: center;
             }
         }
-
+        .shortened-links{
+            .shortened-link-container{
+                flex-direction: column;
+                width: 100%;
+                padding:1rem 5%;
+                .original-link{
+                    padding-bottom: 0.5rem;
+                    max-width: 100%;
+                }
+            }
+        }
         .advanced-stats{
             height: auto;
             align-items: center;
@@ -442,9 +489,14 @@ footer{
             .stats-cards-container{
                 flex-direction: column;
                 .card{
-                    width: 100%;
+                    width: 90%;
                     top: 0;
-                    margin-bottom: 4rem;
+                    margin-bottom: 5rem;
+                    text-align: center;
+                    .icon-circle{
+                        left: 50%;
+                        transform: translate(-50%);
+                    }
                 }
                 .line{
                     height: 90%;
@@ -459,6 +511,7 @@ footer{
         
         }
         .call-to-action-container{
+            height: 50vh;
             .cta-text{
                 font-size: 1.5rem;
             }
@@ -473,8 +526,23 @@ footer{
         flex-direction: column;
         align-items: center;
         padding-bottom: 10vh;
+        .logo{
+            padding-bottom: 3rem;
+        }
         .navigation-container-footer{
             flex-direction: column;
+            .nav-footer-section{
+                align-items: center;
+                .nav-footer-title{
+                    text-align: center;
+                }
+                .nav-links{
+                    padding-bottom: 2rem;
+                    .nav-link{
+                        text-align: center;
+                    }
+                }
+            }
         }
     }
 }

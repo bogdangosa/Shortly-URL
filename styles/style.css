@@ -82,6 +82,16 @@ header .signup-btn {
   background: #2acfcf;
   color: #ffffff;
   border-radius: 4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+header .signup-btn:hover {
+  background-color: #9de1e2;
+}
+
+header .hamburger {
+  display: none;
 }
 
 main {
@@ -119,6 +129,12 @@ main .home .home-text-container .getstarted-btn {
   background: #2acfcf;
   color: #ffffff;
   border-radius: 4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .home .home-text-container .getstarted-btn:hover {
+  background-color: #9de1e2;
 }
 
 main .home .work-ilustration {
@@ -195,6 +211,12 @@ main .shorten-link-container .shorten-btn {
   cursor: pointer;
   white-space: nowrap;
   z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .shorten-link-container .shorten-btn:hover {
+  background-color: #9de1e2;
 }
 
 main .shorten-link-container .no-link-message {
@@ -273,6 +295,12 @@ main .shortened-links .shortened-link-container .new-link-container .copy-btn {
   color: #ffffff;
   border-radius: 0.3rem;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .shortened-links .shortened-link-container .new-link-container .copy-btn:hover {
+  background-color: #9de1e2;
 }
 
 main .advanced-stats {
@@ -333,7 +361,7 @@ main .advanced-stats .stats-cards-container .card {
 }
 
 main .advanced-stats .stats-cards-container .card .icon-circle {
-  background-color: #232127;
+  background-color: #3b3054;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
@@ -402,6 +430,12 @@ main .call-to-action-container .cta-btn {
   color: #ffffff;
   border-radius: 4rem;
   z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .call-to-action-container .cta-btn:hover {
+  background-color: #9de1e2;
 }
 
 main .call-to-action-container .background-cta {
@@ -492,6 +526,25 @@ footer .attribution a {
   header .login-btn-container {
     display: none;
   }
+  header .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 1.5rem;
+  }
+  header .hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #9e9aa7;
+  }
   main .home {
     height: 75vh;
     width: 90%;
@@ -528,6 +581,18 @@ footer .attribution a {
     width: 80%;
     text-align: center;
   }
+  main .shortened-links .shortened-link-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 1rem 5%;
+  }
+  main .shortened-links .shortened-link-container .original-link {
+    padding-bottom: 0.5rem;
+    max-width: 100%;
+  }
   main .advanced-stats {
     height: auto;
     -webkit-box-align: center;
@@ -545,9 +610,15 @@ footer .attribution a {
             flex-direction: column;
   }
   main .advanced-stats .stats-cards-container .card {
-    width: 100%;
+    width: 90%;
     top: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  main .advanced-stats .stats-cards-container .card .icon-circle {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
   }
   main .advanced-stats .stats-cards-container .line {
     height: 90%;
@@ -556,6 +627,9 @@ footer .attribution a {
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
+  }
+  main .call-to-action-container {
+    height: 50vh;
   }
   main .call-to-action-container .cta-text {
     font-size: 1.5rem;
@@ -571,11 +645,28 @@ footer .attribution a {
             align-items: center;
     padding-bottom: 10vh;
   }
+  footer .logo {
+    padding-bottom: 3rem;
+  }
   footer .navigation-container-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  footer .navigation-container-footer .nav-footer-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .navigation-container-footer .nav-footer-section .nav-footer-title {
+    text-align: center;
+  }
+  footer .navigation-container-footer .nav-footer-section .nav-links {
+    padding-bottom: 2rem;
+  }
+  footer .navigation-container-footer .nav-footer-section .nav-links .nav-link {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
