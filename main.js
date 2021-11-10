@@ -60,3 +60,12 @@ const Getdata = async (link_value)=>{
     const result = await response.json();
     return result;
 }
+
+
+const Hamburger = document.getElementById("hamburger");
+const NavBar = document.getElementById('nav-bar');
+
+Hamburger.addEventListener('click',()=>{
+    Hamburger.classList.toggle('hamburger_x');
+    NavBar.classList.toggle('nav-bar-visible');
+})
